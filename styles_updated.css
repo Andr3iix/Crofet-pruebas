@@ -1,0 +1,459 @@
+/* General */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Fondo oscuro */
+  color: #e0e0e0;
+}
+
+/* Encabezado */
+header {
+  color: white;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 15px 20px; /* Asegura un espacio interno suficiente */
+  background-color: #1f1f1f; /* Fondo uniforme */
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra debajo del encabezado */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .header-container {
+  gap: 15px; /* Espacio entre logo y texto */
+  min-height: 60px; /* Mantener la altura del header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  max-height: 40px; /* Tamaño más pequeño del logo */
+}
+
+header .title-container h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem; /* Tamaño más pequeño del título */
+  margin: 0;
+}
+header .logo {
+  max-height: 40px;
+  margin-right: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espacio reducido entre elementos del menú */
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1f1f1f; /* Asegurar que coincida con el fondo */
+  box-shadow: none; /* Eliminar cualquier sombra */
+}
+
+header nav ul li a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 8px; /* Reducir el área de clic */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #a854fd;
+  border-bottom: 2px solid #a854fd;
+}
+header .title-container p {
+  font-size: 0.9rem; /* Reducir subtítulo */
+  color: #a8a8a8;
+  margin: 0;
+}
+
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  background: linear-gradient(90deg, #1f1f1f, #2c2c2c);
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #a854fd;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #b8b8b8;
+}
+
+
+/* Refinar diseño del catálogo */
+
+/* Catálogo */
+.catalogo-previa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tamaño mínimo consistente */
+  gap: 30px; /* Espaciado más equilibrado */
+  padding: 20px; /* Relleno equilibrado */
+  justify-items: center; /* Centrado de los elementos */
+  align-items: start; /* Alineación superior */
+}
+
+
+
+.catalogo-item {
+  background-color: #1f1f1f;
+  text-align: center;
+  border-radius: 15px; /* Bordes redondeados */
+  overflow: hidden;
+  width: 100%; /* Se ajusta al contenedor */
+  max-width: 250px; /* Ancho máximo consistente */
+  min-height: 400px; /* Altura mínima */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5); /* Sombras */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.catalogo-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px; /* Bordes redondeados para imágenes */
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.catalogo-item p {
+  margin: 5px 0; /* Espaciado reducido */
+  padding: 10px 5px;
+  font-size: 1rem; /* Ajustar tamaño de texto */
+  color: #e0e0e0; /* Texto claro */
+  font-weight: bold;
+}
+
+.catalogo-item p:nth-child(2) {
+  color: #ffffff; /* Precio en blanco */
+  font-weight: bold;
+}
+
+.catalogo-item:hover {
+  transform: scale(1.1); /* Incremento más visible */
+  border-color: #ffffff; /* Cambiar borde al pasar el cursor */
+  box-shadow: 0px 8px 16px rgba(168, 84, 253, 0.6); /* Sombra más notoria */
+}
+
+/* Botón Ver Más */
+.btn-ver-mas {
+  background-color: #a854fd;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  display: block; /* Para centrado */
+  margin: 20px auto 0 auto; /* Centrado */
+  padding: 15px 30px;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  width: fit-content;
+}
+
+.btn-ver-mas:hover {
+  background-color: #ffffff;
+  color: #a854fd;
+}
+
+
+/* Sección de Historia */
+#historia {
+  padding: 40px 10%;
+  text-align: center;
+}
+
+#historia h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #a854fd;
+}
+
+#historia p {
+  font-size: 1.2rem;
+  color: #cfcfcf;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+/* Sección de Testimonios */
+.reseñas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 50px;
+}
+
+.reseña img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+a {
+  text-decoration: none; /* Quita el subrayado por defecto */
+  color: inherit; /* Mantiene el color del texto */
+}
+
+a:hover {
+  text-decoration: none; /* Asegura que no aparezca subrayado en hover */
+  color: #a854fd; /* Cambia el color al pasar el mouse, opcional */
+}
+
+
+/* Footer */
+footer {
+  background: #1f1f1f;
+  text-align: center;
+  padding: 20px;
+  color: #a8a8a8;
+  margin-top: 0; /* Elimina el espacio superior */
+  border-top: 2px solid #a854fd; /* Si quieres mantener solo una línea aquí */
+}
+
+footer a {
+  color: #a854fd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+h2 {
+  color: #a854fd; /* Igual a "Explorar Moda Y2K" */
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem; /* Tamaño ajustado */
+}
+#feedback {
+  padding: 40px 10%;
+  text-align: center;
+  background-color: #121212; /* Fondo oscuro */
+  border-bottom: 2px solid #a854fd; /* Línea divisoria */
+  margin-bottom: 0; /* Elimina cualquier margen inferior */
+  padding-bottom: 0; /* Elimina cualquier relleno extra */
+  border-bottom: none; /* Asegúrate de que no haya línea */
+}
+
+#feedback h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #a854fd; /* Color del texto */
+  margin-bottom: 20px;
+}
+
+#feedback .reseñas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+#feedback .reseña img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+
+.section {
+  padding: 40px 10%;
+  text-align: center;
+  background-color: #1f1f1f;
+}
+
+.section:not(:last-child) {
+  border-bottom: 2px solid #a854fd;
+}
+
+.section:nth-child(odd) {
+  background-color: #121212;
+}
+
+.section:nth-child(even) {
+  background-color: #1f1f1f;
+}
+/* Estilos generales permanecen iguales */
+.hamburger {
+  display: none;
+}
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  header {
+    position: relative; /* Garantizar que el nav esté relacionado al header */
+    border-bottom: none;
+  }
+  /* Ocultar menú estándar */
+  header nav ul {
+    top: 60px; /* Ajustar debajo del header */
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 100%; /* Ubicar el menú justo debajo del header */
+    right: 0;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 10px 10px;
+    z-index: 1000; /* Asegurar que el menú esté por encima de otros elementos */
+    border: none;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    background-color: #1f1f1f;
+  }
+
+  /* Mostrar menú si está activo */
+  header nav ul.active {
+    display: flex;
+  }
+  /* Asegurar el diseño del header */
+  .header-container {
+    justify-content: space-between;
+  }
+  main {
+    margin-top: 10px; /* Ajustar según el diseño deseado */
+  }
+  .catalogo-previa {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila en móvil */
+    gap: 10px; /* Espaciado reducido entre los cuadros */
+    padding: 10px; /* Ajuste de relleno para pantallas pequeñas */
+  }
+
+  .catalogo-item {
+    max-width: 100%; /* Ajustar el ancho al contenedor */
+    min-height: auto; /* Permitir que las imágenes se adapten automáticamente */
+    height: auto; /* Altura automática para ajustarse mejor */
+  }
+  .catalogo-item p {
+    font-size: 0.85rem; /* Texto más pequeño para pantallas móviles */
+  }
+  .catalogo-item img {
+    height: 120px; /* Imagen más compacta */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: auto; /* Mantén la altura proporcional */
+    border-radius: 10px; /* Bordes redondeados para consistencia */
+    object-fit: contain; /* Asegura que la imagen no se recorte ni deforme */
+  }
+  #feedback .reseñas-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 15px; /* Espaciado entre las imágenes */
+    padding: 10px; /* Espaciado interno de la sección */
+  }
+
+  #feedback .reseña img {
+    width: 100%; /* Llenar el contenedor */
+    height: auto; /* Mantener proporción */
+    object-fit: cover; /* Recortar si es necesario */
+    border-radius: 10px; /* Bordes redondeados para consistencia */
+  }
+  .hamburger {
+    font-size: 2.5rem; /* Incrementa el tamaño del botón */
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 5px; /* Espaciado interno más uniforme */
+    position: absolute; /* Asegura un posicionamiento flexible */
+    top: 15px; /* Ajusta la posición vertical */
+    right: 10px; /* Acerca el botón al borde derecho */
+    cursor: pointer; /* Muestra el cursor interactivo */
+    background: none;
+    border: none;
+    color: white;
+    display: block;
+  }
+}
+
+.header-container {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+main {
+  padding-top: 10px; /* Opcional: Espaciado para separar el contenido del header */
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Fondo consistente con el diseño */
+}
+
+/* Remover cualquier borde adicional o margen en el nav */
+header nav {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+/* Ajuste global para eliminar cualquier borde o sombra en todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+/* Fade In */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide In desde la izquierda */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Zoom In */
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.zoom-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
